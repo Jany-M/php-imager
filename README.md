@@ -40,8 +40,6 @@ php_imager($width=null, $height=null, $imgurl=null, $nohtml=false, $class=null, 
 ?>
 ```
 
-The function returns the value, to print it, echo it.
-
 <table>
   <tr>
     <th>Parameter</th>
@@ -74,19 +72,19 @@ The function returns the value, to print it, echo it.
   <tr>
     <td><code>class</code></td>
     <td>string</td>
-    <td>class name/names to append to image</td>
+    <td>class name/names to append to image. Separate with space.</td>
     <td>NULL</td>
   </tr>
   <tr>
     <td><code>imgurl</code></td>
     <td>string</td>
-    <td>URL of some external/custom image (eg. http://www.mysite.com/image.jpg)	</td>
+    <td>URL of the image (eg. http://www.mysite.com/image.jpg).</td>
     <td>NULL</td>
   </tr>
   <tr>
     <td><code>nohtml</code></td>
     <td>bool</td>
-    <td>When false,images are wrapped already in their HTML tag `<img src="#" />`, with alt attribute filled with post's title for better SEO. If true, only the image url is returned</td>
+    <td>When false, image is wrapped in its <code>img</code> HTML tag. If true, only the image url is returned.</td>
     <td>false</td>
   </tr>
   <tr>
