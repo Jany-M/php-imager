@@ -1,0 +1,16 @@
+# This is a customized WP htaccess to use with WP Imager
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/(cache_img) [NC]
+RewriteRule . /index.php [L]
+RewriteRule ^cache_img/r/(.*)x(.*)-(.*)/b/(.*)/i/(.*) cache_img/tt.php?src=http://%{HTTP_HOST}/$5&w=$1&h=$2&zc=$3&cc=$4 [L]
+</IfModule>
+# End of Customized htaccess
+
+# BEGIN WordPress
+
+# END WordPress
