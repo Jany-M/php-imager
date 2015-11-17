@@ -1,6 +1,7 @@
 # PHP Imager
 
 **PHP Imager** makes image management easier when it comes to manipulating, caching and customizing images.
+It has a WordPress twin, [WP-Imager](https://github.com/Jany-M/WP-Imager/)
 
 > Uses **[TimThumb](http://code.google.com/p/timthumb/)** for image resizing and caching
 
