@@ -86,7 +86,7 @@ The function returns the value, to print it, echo it.
   <tr>
     <td><code>nohtml</code></td>
     <td>bool</td>
-    <td>When false,images are wrapped already in their HTML tag <code><img src="#" /></code>, with alt attribute filled with post's title for better SEO. If true, only the image url is returned</td>
+    <td>When false,images are wrapped already in their HTML tag `<img src="#" />`, with alt attribute filled with post's title for better SEO. If true, only the image url is returned</td>
     <td>false</td>
   </tr>
   <tr>
