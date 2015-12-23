@@ -5,7 +5,7 @@
  *
  *	Description			Script for PHP that provides resizing, output customization and image caching.
  *	First Release		05.11.2015
- *	Version				1.0
+ *	Version				1.0.1
  *	License				GPL V3 - http://choosealicense.com/licenses/gpl-v3/
  *  External libs		TimThumb - http://code.google.com/p/timthumb/
  *
@@ -43,7 +43,7 @@ function php_imager($width=null, $height=null, $imgurl=null, $nohtml=false, $cla
 	
 	//if($imgurl = null) return;
 
-	function url(){
+	function php_imager_url(){
 	    if(isset($_SERVER['HTTPS'])){
 	        $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
 	    }
@@ -56,7 +56,7 @@ function php_imager($width=null, $height=null, $imgurl=null, $nohtml=false, $cla
 	
 	// Defaults
 	$cache = '/cache_img/';
-	$siteurl = url();
+	$siteurl = php_imager_url();
 	$sitecache = $siteurl.$cache;
 	require_once ($_SERVER['DOCUMENT_ROOT'].$cache.'tt-conf.php'); // Adjust here your preferred TimThumb defaults
 
