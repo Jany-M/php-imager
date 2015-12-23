@@ -39,21 +39,22 @@
  *
 **/
 
+function php_imager_url(){
+	if(isset($_SERVER['HTTPS'])){
+	    $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
+	}
+	else{
+	    $protocol = 'http';
+	}
+	return $protocol . "://" . $_SERVER['HTTP_HOST'];
+	// $_SERVER['SERVER_NAME']
+}
+
+
 function php_imager($width=null, $height=null, $imgurl=null, $nohtml=false, $class=null, $crop=null, $bg_color=null) {
 	
 	//if($imgurl = null) return;
 
-	function php_imager_url(){
-	    if(isset($_SERVER['HTTPS'])){
-	        $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
-	    }
-	    else{
-	        $protocol = 'http';
-	    }
-	    return $protocol . "://" . $_SERVER['HTTP_HOST'];
-	    // $_SERVER['SERVER_NAME']
-	}
-	
 	// Defaults
 	$cache = '/cache_img/';
 	$siteurl = php_imager_url();
